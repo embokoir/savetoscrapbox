@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebScrap Options</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+         body {
+             margin: 0;
+         }
+         .content {
+             padding: 10px;
+             text-align:center;
+         }
+         button {
+             background-color: #4CAF50;
+             border: none;
+             color: white;
+             padding: 7px 32px;
+             font-size: 16px;
+             margin: 4px 2px;
+             cursor: pointer;
+         }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="content">
+
+            <div>
+                <h2>Web Scrap to Scrapbox</h2>
+            </div>
+
+            <div>
+                <label>Project Url: https://scrapbox.io/</label>
+                <input id="projectName">
+            </div>
+
+            <div>
+                <label>Tags (Optional): </label>
+                <input id="tags">
+                <p>You can set multiple tags by separating with ","(comma). Spaces are ignored.</p>
+            </div>
+
+            <div>
+                <button id="save">Save</button>
+            </div>
+
+            <div id="status"></div>
+
+            <br/>
+
+            <div>
+                <a href="chrome://extensions/shortcuts" id="shortcut">Keyboard Shortcut</a>
+            </div>
+
+            <div>
+                <a href="https://twitter.com/emkoboir" target="_blank">Contact</a>  /  <a href="https://github.com/embokoir/webscraptoscrapbox" target="_blank">Contribute</a>
+            </div>
+
+        </div>
+        <script src="options.js"></script>
+    </body>
+</html>
