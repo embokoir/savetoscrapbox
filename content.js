@@ -8,7 +8,7 @@
             const tags = items.selectedTags ? "#" + items.selectedTags.replace(/\s/g, "").split(",").join(" #") : false;
 
             if (!project) {
-                alert('Set Project Url!');
+                alert('はじめに、プロジェクトのURLをセットしましょう!');
                 window.open(chrome.runtime.getURL("options.html"));
                 return;
             }
