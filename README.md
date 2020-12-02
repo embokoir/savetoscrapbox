@@ -1,4 +1,4 @@
-# Web Scrap to Scrapbox
+# Save to Scrapbox
 
 <a href="https://chrome.google.com/webstore/detail/web-scrap-to-scrapbox/jcdhmhfihdilhhnjhflmanmoimfjpakh" target="_blank">
 <img src="https://i.gyazo.com/991809bf5c665b0b280d9a2cd6ebbe6b.png" width="300" />
