@@ -1,7 +1,7 @@
 {
   "name": "Save to Scrapbox",
   "icons": {"128": "icon.png"},
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 2,
   "description": "Save web page to your Scrapbox",
   "permissions": [
