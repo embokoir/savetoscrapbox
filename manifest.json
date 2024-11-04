@@ -1,20 +1,17 @@
 {
-  "name": "Save to Scrapbox",
+  "name": "Save to Cosense (ex-Scrapbox)",
   "icons": {"128": "icon.png"},
-  "version": "1.1.1",
-  "manifest_version": 2,
-  "description": "Save web page to your Scrapbox",
+  "version": "1.2.1",
+  "manifest_version": 3,
+  "description": "A quick tool for clipping webpages using Cosense.",
   "permissions": [
     "activeTab",
     "storage"
   ],
-  "browser_action": {
+  "action": {
+    "default_popup": "popup.html",
     "default_icon": "icon.png",
-    "default_title": "Save this page to your Scrapbox"
-  },
-  "background": {
-    "scripts": ["content.js"],
-    "persistent": false
+    "default_title": "Click to save this web page to your Cosense."
   },
   "options_page": "options.html"
 }

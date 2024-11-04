@@ -1,35 +1,46 @@
-function saveOptions() {
+const setStatusMessage = (message, color = '#4CAF50', duration = 10000) => {
+    const status = document.getElementById('status');
+    status.textContent = message;
+    status.style.color = color;
+    setTimeout(() => {
+        status.textContent = '';
+        status.style.color = '';
+    }, duration);
+};
 
-    const projectName = document.getElementById('projectName').value;
+const saveOptions = async () => {
+    const projectName = document.getElementById('projectName').value.trim();
     const tags = document.getElementById('tags').value;
 
-    chrome.storage.sync.set({
-        selectedProjectName: projectName,
-        selectedTags: tags
-    }, () => {
-        const status = document.getElementById('status');
-        status.textContent = 'Options saved!';
-        setTimeout(() => {
-            status.textContent = '';
-        }, 1500);
-    });
-}
+    if (!projectName) {
+        setStatusMessage('Project name cannot be empty!', 'red', 5000);
+        return;
+    }
 
+    await chrome.storage.sync.set({ selectedProjectName: projectName, selectedTags: tags });
+    setStatusMessage('Settings saved!');
+};
 
-function openShotcutSetting() {
+const openShortcutSetting = () => {
     chrome.tabs.update({ url: 'chrome://extensions/shortcuts' });
-}
+};
 
-function restoreOptions() {
-    chrome.storage.sync.get({
-        selectedProjectName: '',
-        selectedTags: 'WebScrap'
-    }, items => {
-        document.getElementById('projectName').value = items.selectedProjectName;
-        document.getElementById('tags').value = items.selectedTags;
-    });
-}
+const restoreOptions = async () => {
+    const { selectedProjectName = '', selectedTags = 'WebScrap' } = await chrome.storage.sync.get(['selectedProjectName', 'selectedTags']);
+    document.getElementById('projectName').value = selectedProjectName;
+    const projectUrl = `https://scrapbox.io/${selectedProjectName}/`;
+    document.getElementById('projectUrl').href = projectUrl;
+    document.getElementById('projectUrl').textContent = projectUrl;
+    document.getElementById('tags').value = selectedTags;
+};
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.getElementById('save').addEventListener('click', saveOptions);
-document.getElementById('shortcut').addEventListener('click', openShotcutSetting);
+document.getElementById('shortcut').addEventListener('click', openShortcutSetting);
+
+document.getElementById("projectName").addEventListener("input", (e) => {
+    const projectName = e.target.value.trim();
+    const projectUrl = `https://scrapbox.io/${projectName}/`;
+    document.getElementById("projectUrl").href = projectUrl;
+    document.getElementById("projectUrl").textContent = projectUrl;
+});

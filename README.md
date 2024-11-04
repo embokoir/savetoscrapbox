@@ -1,21 +1,51 @@
-# Save to Scrapbox
+[![Cosense Extension](https://i.gyazo.com/991809bf5c665b0b280d9a2cd6ebbe6b.png)](https://chrome.google.com/webstore/detail/web-scrap-to-scrapbox/jcdhmhfihdilhhnjhflmanmoimfjpakh)
 
-<a href="https://chrome.google.com/webstore/detail/web-scrap-to-scrapbox/jcdhmhfihdilhhnjhflmanmoimfjpakh" target="_blank">
-<img src="https://i.gyazo.com/991809bf5c665b0b280d9a2cd6ebbe6b.png" width="300" />
-</a>
+# Save to Cosense
 
-## About
+### Handy extension for Cosense (formerly Scrapbox) users!
 
-- [Scrapbox](https://scrapbox.io/product)ユーザ向けのサードパーティ拡張機能です
-- クリックして、閲覧しているウェブページのタイトル・URLでScrapboxにページを作成します
-- 簡易的なウェブクリッパーとしてご利用ください
-- サーバーへのデータの送信などは行わず、クライアントサイドで完結します
+A quick tool for clipping webpages using Cosense.  
+With just a click, you can create a page in your Cosense from the web page’s title and URL.  
+You can set your own keyboard shortcuts and page tags (= links).  
+Enjoy your Cosense life! 🦫
 
-[![Image from Gyazo](https://i.gyazo.com/79977188ecfd3b35da01830012f383d5.gif)](https://gyazo.com/79977188ecfd3b35da01830012f383d5)
+### How It Works
 
-## 使い方など
+- Once installed, click the icon in the extension menu..
+- On your first click, you’ll be directed to settings to configure the project URL and tags.
+- For future clicks, a page will be automatically added in your Cosense.
+- To update the settings, just right-click on the icon and select “Options.”
 
-- [chrome web store](https://chrome.google.com/webstore/detail/web-scrap-to-scrapbox/jcdhmhfihdilhhnjhflmanmoimfjpakh)からインストール
-- 初回のアイコンクリック時に、保存先のScrapboxプロジェクトを設定します
-  - 保存時に一緒につけるリンク（`#タグ`形式）も設定できます
-- 変更する場合はアイコンを右クリック→オプションから可能です
+### Notes
+
+Your privacy is safe as no usage data is collected.  
+The source code is available [here](https://github.com/embokoir/savetoscrapbox).
+
+Developed by a third party, this extension has no official support or endorsement.  
+Great appreciation to the Cosense team for such a fantastic product!  
+[https://cosen.se/product](https://cosen.se/product)
+
+---
+
+### Cosense（旧：Scrapbox）ユーザー向けの拡張機能
+
+ワンクリックで、WebページのタイトルとURLからCosenseにページを作成します。  
+キーボードショートカットやページ作成時のタグ（＝リンク）も自由に設定可能。  
+素晴らしいCosenseライフを！🦫
+
+### 使い方
+
+- インストール後、ブラウザ右上の拡張機能メニューからアイコンをクリックしてください。
+- 初回クリック時は設定画面が開くので、プロジェクトのURLやタグを設定します。
+- 以降はクリックするたびにCosenseへページが作成されます。
+- 設定はアイコン右クリックから「オプション」を開いていつでも変更できます。
+
+### 備考
+
+利用データの収集は行っておらず、プライバシーも安心です。  
+ソースコードは[こちら](https://github.com/embokoir/savetoscrapbox)でご覧になれます。
+
+サードパーティによる拡張機能で、公式のものではありません。  
+Cosenseチームの皆さん、いつも素晴らしいプロダクトをありがとうございます！  
+[https://cosen.se/product](https://cosen.se/product)
+

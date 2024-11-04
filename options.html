@@ -1,64 +1,159 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Save Options</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <style>
-         body {
-             margin: 0;
-         }
-         .content {
-             padding: 10px;
-             text-align:center;
-         }
-         button {
-             background-color: #4CAF50;
-             border: none;
-             color: white;
-             padding: 7px 32px;
-             font-size: 16px;
-             margin: 4px 2px;
-             cursor: pointer;
-         }
-        </style>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Save to Cosense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .content {
+            width: 100%;
+            max-width: 500px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            margin: 30px 0 8px 0;
+            color: #555;
+        }
+        .input-group {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .input-prefix {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            white-space: nowrap;
+            font-family: 'Poppins', sans-serif;
+        }
+        .input-field, #tags {
+            width: 90%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        .input-field {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: none;
+        }
+        .input-field:focus, #tags:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            margin: 20px 0 10px 0;
+            padding: 12px 40px;
+            font-size: 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #43a047;
+            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3);
+        }
+        p, a#projectUrl {
+            font-size: 12px;
+            color: #666;
+        }
+        #support {
+            margin-bottom: 30px;
+        }
+        a.support {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a.support:hover {
+            color: #388e3c;
+        }
+        #status {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #4CAF50;
+        }
+        #special, a.special {
+            color: #a3a3a3;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Settings</h2>
+        <p>You can access this page anytime<br/>by right-clicking the extension icon and selecting "Options".</p>
 
-    <body>
-
-        <div class="content">
-
-            <div>
-                <h2>Save Options</h2>
+        <div>
+            <label for="projectName">Project URL :</label>
+            <div class="input-group">
+                <span class="input-prefix">https://scrapbox.io/</span>
+                <input class="input-field" id="projectName" placeholder="Enter your project name.">
             </div>
-
-            <div>
-                <label>プロジェクトのURL: https://scrapbox.io/</label>
-                <input id="projectName">
-            </div>
-
-            <div>
-                <label>リンク(任意): </label>
-                <input id="tags">
-                <p>","(カンマ)区切りで複数のリンクを設定できます. スペースは無視されます.</p>
-            </div>
-
-            <div>
-                <button id="save">Save</button>
-            </div>
-
-            <div id="status"></div>
-
-            <br/>
-
-            <div>
-                <a href="chrome://extensions/shortcuts" id="shortcut">Keyboard Shortcut</a>
-            </div>
-
-            <div>
-                <a href="https://twitter.com/embokoir" target="_blank">Contact</a>  /  <a href="https://github.com/embokoir/savetoscrapbox" target="_blank">Contribute</a>
-            </div>
-
+            <p>The page will be created in <a id="projectUrl" href="https://scrapbox.io/" target="_blank">https://scrapbox.io/</a></p>
         </div>
-        <script src="options.js"></script>
-    </body>
+
+        <div>
+            <label for="tags">Tags (Optional) :</label>
+            <input id="tags" placeholder="Add tags as needed.">
+            <p>Multiple tags can be set, separated by commas. Spaces will be ignored.</p>
+        </div>
+
+        <button id="save">Save</button>
+        <div id="status"></div>
+
+        <div id="support">
+            <a class="support" style="cursor: pointer;" id="shortcut">Keyboard Shortcut</a> | 
+            <a class="support" href="https://twitter.com/shogo_embokoir" target="_blank">Contact</a> | 
+            <a class="support" href="https://github.com/embokoir/savetoscrapbox" target="_blank">Contribute</a>
+        </div>
+
+        <div id="special">
+            Special thanks to the team at <a class="special" href="https://cosen.se/product" target="_blank">Cosense</a>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
 </html>
