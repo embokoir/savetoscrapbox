@@ -1,7 +1,7 @@
 {
-  "name": "Save to Cosense (ex-Scrapbox)",
+  "name": "Save to Cosense (formarly-Scrapbox)",
   "icons": {"128": "icon.png"},
-  "version": "1.2.1",
+  "version": "1.2.2",
   "manifest_version": 3,
   "description": "A quick tool for clipping webpages using Cosense.",
   "permissions": [
